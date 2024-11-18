@@ -1,0 +1,10 @@
+# Игнорировать папку node_modules в корне проекта
+node_modules/
+
+# Игнорировать папку node_modules в папке с бэкендом
+backend/node_modules/
+
+# Игнорировать папку node_modules в папке с фронтендом
+frontend/node_modules/
+
+previewConfig.json
