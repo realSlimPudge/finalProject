@@ -1,31 +1,40 @@
-.footer__grid{
+.footer__content {
+    padding: 0px 40px 80px 40px;
+}
+
+.footer__grid {
     display: grid;
     grid-template-columns: 780px 548px;
     gap: 32px;
     grid-template-rows: 150px 194px;
+    margin-top: 40px;
 }
 
-.footer__cart{
+.footer__cart {
     border-radius: 12px;
     padding: 32px;
     background: var(--light-grey);
 
-
-    p:first-child{
+    p:first-child {
         font-weight: 500;
         line-height: 130%;
         color: var(--grey);
         font-size: 20px;
     }
-    p:nth-child(2){
+    p:nth-child(2) {
         font-size: 40px;
         line-height: 110%;
         color: var(--black);
         font-weight: 600;
         margin-top: 10px;
     }
+    .footer__img {
+        display: flex;
+        column-gap: 16px;
+        margin-top: 10px;
+    }
 }
-.footer__map{
+.footer__map {
     border-radius: 12px;
     width: 1360px;
     height: 350px;

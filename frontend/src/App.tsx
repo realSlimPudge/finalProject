@@ -3,6 +3,7 @@ import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import UnderConstruction from "./Components/UnderConstruction/UnderConstruction";
+import MainPage from "./Pages/MainPage/MainPage";
 
 function App() {
     return (
@@ -11,7 +12,7 @@ function App() {
                 <Header />
                 <main>
                     <Routes>
-                        <Route path="/" element={<UnderConstruction />}></Route>
+                        <Route path="/" element={<MainPage />}></Route>
                         <Route
                             path="/categories"
                             element={<UnderConstruction />}
