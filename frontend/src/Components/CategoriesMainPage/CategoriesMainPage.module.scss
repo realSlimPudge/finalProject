@@ -1,0 +1,15 @@
+.cmp__content{
+    padding: 0px 40px 0px 40px;
+
+    .cmp__title{
+        display: flex;
+        align-items: center;
+        justify-content:space-between;
+        margin-bottom: 40px;
+
+        div{
+            display: flex;
+            align-items: center;
+        }
+    }
+}

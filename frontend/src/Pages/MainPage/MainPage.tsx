@@ -1,13 +1,15 @@
 import React from "react";
 import styles from "./MainPage.module.scss";
 import Welcome from "../../Components/Welcome/Welcome";
-import Categories from "../../Components/Categories/Categories";
+import CategoriesMainPage from "../../Components/CategoriesMainPage/CategoriesMainPage";
+import DiscountForm from "../../Components/DiscountForm/DiscountForm";
 
 const MainPage: React.FC = () => {
     return (
         <>
             <Welcome />
-            <Categories count={4} />
+            <CategoriesMainPage />
+            <DiscountForm/>
         </>
     );
 };

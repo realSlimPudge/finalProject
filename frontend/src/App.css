@@ -2,3 +2,8 @@
     max-width: 1440px;
     margin: 0 auto;
 }
+main{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 80px;
+}
