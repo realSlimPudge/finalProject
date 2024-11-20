@@ -1,0 +1,20 @@
+.button {
+    width: 100%;
+    border-radius: 6px;
+    padding: 16px 32px;
+    height: 58px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 130%;
+    text-align: center;
+    color: var(--black);
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all 300ms ease;
+
+    &:hover {
+        background: var(--black);
+        color: var(--white);
+    }
+}

@@ -1,10 +1,9 @@
 import React from "react";
-import styles from './DiscountForm.module.scss'
+import Form from "../../Elements/Form/Form";
+import styles from "./DiscountForm.module.scss";
 
-
-
-const DiscountForm:React.FC = () =>{
-    return(
+const DiscountForm: React.FC = () => {
+    return (
         <section className={styles.content}>
             <div className={styles.background}>
                 <div>
@@ -15,12 +14,12 @@ const DiscountForm:React.FC = () =>{
                         <img src="./image.png" alt="image" />
                     </div>
                     <div>
-
+                        <Form />
                     </div>
                 </div>
             </div>
         </section>
-    )
-}
+    );
+};
 
-export default DiscountForm
+export default DiscountForm;

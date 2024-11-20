@@ -1,0 +1,14 @@
+.form {
+    width: 516px;
+    height: 296px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    > div:first-child {
+        height: 206px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
