@@ -1,18 +1,16 @@
 import React from "react";
-import styles from "./Title.module.scss"
+import styles from "./Title.module.scss";
 
-interface TitleProps{
-    title:string
+interface TitleProps {
+    children: React.ReactNode;
 }
 
-const Title:React.FC<TitleProps> = ({title}) =>{
-    return(
+const Title: React.FC<TitleProps> = ({ children }) => {
+    return (
         <div className={styles.title}>
-            <p>
-                {title}
-            </p>
+            <p>{children}</p>
         </div>
-    )
-}
+    );
+};
 
-export default Title
+export default Title;

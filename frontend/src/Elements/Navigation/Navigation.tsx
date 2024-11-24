@@ -1,14 +1,16 @@
 import React from "react";
-import styles from './Navigation.module.scss'
+import styles from "./Navigation.module.scss";
 
-const Navigation:React.FC = () =>{
-    return(
-        <div className={styles.content}>
-            <button>
-                All categories
-            </button>
-        </div>
-    )
+interface NavProps {
+    children: React.ReactNode;
 }
 
-export default Navigation
+const Navigation: React.FC<NavProps> = ({ children }) => {
+    return (
+        <div className={styles.content}>
+            <button>{children}</button>
+        </div>
+    );
+};
+
+export default Navigation;

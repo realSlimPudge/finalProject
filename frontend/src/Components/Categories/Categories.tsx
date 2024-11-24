@@ -10,7 +10,6 @@ interface CategoriesProps {
 }
 
 const Categories: React.FC<CategoriesProps> = ({ count }) => {
-    const backend: string = "http://localhost:3333";
     const dispatch = useDispatch();
     const categories = useSelector(
         (state: RootState) => state.categories.categories
@@ -25,6 +24,7 @@ const Categories: React.FC<CategoriesProps> = ({ count }) => {
     if (loading) {
         return <div>Loading...</div>;
     }
+    // добавить скелетон
     if (error) {
         return <div>Error: {error}</div>;
     }

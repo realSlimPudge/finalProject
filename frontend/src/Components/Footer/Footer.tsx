@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
     return (
         <footer>
             <div className={styles.footer__content}>
-                <Title title={"Contact"} />
+                <Title>Contact</Title>
                 <div className={styles.footer__grid}>
                     <div className={styles.footer__cart}>
                         <p>Phone</p>

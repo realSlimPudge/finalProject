@@ -2,12 +2,12 @@ import React from "react";
 import styles from "./Button.module.scss";
 
 interface ButtonProps {
-    btnContent: string;
+    children: React.ReactNode;
 }
-const Button: React.FC<ButtonProps> = ({ btnContent }) => {
+const Button: React.FC<ButtonProps> = ({ children }) => {
     return (
         <div className={styles.btn__content}>
-            <button>{btnContent}</button>
+            <button>{children}</button>
         </div>
     );
 };

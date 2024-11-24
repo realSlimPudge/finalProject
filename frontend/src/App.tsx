@@ -4,7 +4,7 @@ import Footer from "./Components/Footer/Footer";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import UnderConstruction from "./Components/UnderConstruction/UnderConstruction";
 import MainPage from "./Pages/MainPage/MainPage";
-
+import CategoriesPage from "./Pages/CategoriesPage/CategoriesPage";
 function App() {
     return (
         <Router>
@@ -15,7 +15,7 @@ function App() {
                         <Route path="/" element={<MainPage />}></Route>
                         <Route
                             path="/categories"
-                            element={<UnderConstruction />}
+                            element={<CategoriesPage />}
                         ></Route>
                         <Route
                             path="/products"

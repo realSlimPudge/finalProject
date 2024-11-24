@@ -1,15 +1,17 @@
-.cmp__content{
+.cmp__content {
     padding: 0px 40px 0px 40px;
 
-    .cmp__title{
+    .cmp__title {
         display: flex;
         align-items: center;
-        justify-content:space-between;
+        justify-content: space-between;
         margin-bottom: 40px;
 
-        div{
+        > div:nth-child(2) {
             display: flex;
             align-items: center;
+            width: 100%;
+            padding-left: 30px;
         }
     }
 }
