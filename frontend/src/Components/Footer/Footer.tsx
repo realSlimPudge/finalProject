@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Footer.module.scss";
-import Title from "../../Elements/Title/TItle";
+import Title from "../../Elements/Title/Title";
 
 const Footer: React.FC = () => {
     return (

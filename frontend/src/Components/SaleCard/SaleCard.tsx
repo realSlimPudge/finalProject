@@ -1,12 +1,13 @@
 import React from "react";
 import styles from "./SaleCard.module.scss";
+import BtnCard from "../../Elements/BtnCard/BtnCard";
 
 const server: string = "http://localhost:3333";
 
 interface SaleCardProps {
     title: string;
     price: number;
-    discontPrice: number;
+    discontPrice: number | null;
     image: string;
 }
 
@@ -16,21 +17,29 @@ const SaleCard: React.FC<SaleCardProps> = ({
     discontPrice,
     image,
 }) => {
-    const procent: number = Math.round(((price - discontPrice) / price) * 100);
+    const procent: number | null =
+        discontPrice !== null
+            ? Math.round(((price - discontPrice) / price) * 100)
+            : null;
 
     return (
         <div className={styles.content}>
-            <div className={styles.procent}>
-                <p>{"-" + procent + "%"}</p>
-            </div>
+            {procent !== null && (
+                <div className={styles.procent}>
+                    <p>{"-" + procent + "%"}</p>
+                </div>
+            )}
             <div className={styles.img}>
                 <img src={server + image} alt="" />
+                <div className={styles.btn__container}>
+                    <BtnCard />
+                </div>
             </div>
             <div className={styles.text}>
                 <p>{title}</p>
                 <div>
-                    <strong>{"$" + price}</strong>
-                    <s>{"$" + discontPrice}</s>
+                    <strong>${procent === null ? price : discontPrice}</strong>
+                    {procent !== null && <s>${price}</s>}
                 </div>
             </div>
         </div>

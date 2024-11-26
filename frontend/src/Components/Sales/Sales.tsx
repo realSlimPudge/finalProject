@@ -1,11 +1,13 @@
 import React, { useEffect } from "react";
 import SaleCard from "../SaleCard/SaleCard";
 import styles from "./Sales.module.scss";
-import Title from "../../Elements/Title/TItle";
+import Title from "../../Elements/Title/Title";
 import Separator from "../../Elements/Separator/Separator";
 import Navigation from "../../Elements/Navigation/Navigation";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProducts } from "../../store/features/productSlice";
+import { RootState } from "../../store/store";
+
 const Sales: React.FC = () => {
     const dispatch = useDispatch();
     const products = useSelector((state: RootState) => state.products.products);
@@ -37,14 +39,15 @@ const Sales: React.FC = () => {
         <section className={styles.sales__content}>
             <div className={styles.sales__title}>
                 <Title>Sales</Title>
-                <div>
+                <div className={styles.animated}>
+                    <Navigation to="/sales">All sales</Navigation>
                     <Separator />
-                    <Navigation>All sales</Navigation>
                 </div>
             </div>
             <div className={styles.list}>
                 {sales.map((el: any) => (
                     <SaleCard
+                        key={el.id}
                         title={el.title}
                         price={el.price}
                         discontPrice={el.discont_price}

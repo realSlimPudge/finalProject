@@ -5,6 +5,10 @@
     overflow: hidden;
     transition: 300ms ease scale;
 
+    a {
+        text-decoration: none;
+    }
+
     &:hover {
         scale: 1.05;
     }

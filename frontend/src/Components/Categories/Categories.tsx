@@ -3,7 +3,7 @@ import Category from "../Category/Category";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchCategories } from "../../store/features/categorySlice";
 import styles from "./Categories.module.scss";
-import { RootState } from "@reduxjs/toolkit/query";
+import { RootState } from "../../store/store";
 
 interface CategoriesProps {
     count: number;
@@ -34,7 +34,12 @@ const Categories: React.FC<CategoriesProps> = ({ count }) => {
     return (
         <div className={styles.categories__grid}>
             {newCategories.map((category: any) => (
-                <Category title={category.title} image={category.image} />
+                <Category
+                    key={category.id}
+                    title={category.title}
+                    image={category.image}
+                    id={category.id}
+                />
             ))}
         </div>
     );

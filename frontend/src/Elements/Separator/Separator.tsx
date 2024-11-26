@@ -1,10 +1,8 @@
 import React from "react";
-import styles from './Separator.module.scss'
+import styles from "../Navigation/Navigation.module.scss";
 
-const Separator:React.FC = () => {
-    return(
-        <div className={styles.separator}></div>
-    )
-}
+const Separator: React.FC = () => {
+    return <div className={styles.separator}></div>;
+};
 
-export default Separator
+export default Separator;

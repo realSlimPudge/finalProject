@@ -1,0 +1,13 @@
+.content {
+    width: 100%;
+    padding: 0 40px 0 40px;
+    margin-top: 115px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+}
