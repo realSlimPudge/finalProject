@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Header.module.scss";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
+import Cart from "../../Elements/Cart/Cart";
 
 const Header: React.FC = () => {
     return (
@@ -53,9 +54,7 @@ const Header: React.FC = () => {
                         </li>
                     </ul>
                 </nav>
-                <div className={styles.header__card}>
-                    <img src="/basket.svg" alt="cart" draggable="false" />
-                </div>
+                <Cart />
             </div>
         </header>
     );

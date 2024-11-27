@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { RootState } from "@reduxjs/toolkit/query";
+import { RootState } from "../store";
 
 const initialState: RootState = {
     minPrice: null,

@@ -9,6 +9,8 @@ import CategoriesPage from "./Pages/CategoriesPage/CategoriesPage";
 import ProductsCategories from "./Pages/ProductsCategories/ProductsCategories";
 import AllProducts from "./Pages/AllProductsPage/AllProductsPage";
 import AllSalesPage from "./Pages/AllSalesPage/AllSalesPage";
+import ProductPage from "./Pages/ProductPage/ProductPage";
+import CartPage from "./Pages/CartPage/CartPage";
 
 function App() {
     return (
@@ -27,8 +29,12 @@ function App() {
                             element={<ProductsCategories />}
                         />
                         <Route path="/products" element={<AllProducts />} />
+                        <Route
+                            path="/products/:productId"
+                            element={<ProductPage />}
+                        />
                         <Route path="/sales" element={<AllSalesPage />} />
-
+                        <Route path="/order" element={<CartPage />} />
                         <Route path="*" element={<UnderConstruction />} />
                     </Routes>
                 </main>

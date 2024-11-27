@@ -2,7 +2,7 @@
     width: fit-content;
     height: 58px;
 
-    button {
+    a {
         width: 100%;
         height: 100%;
         background: var(--green);
@@ -19,6 +19,7 @@
         transition-duration: 300ms;
         transition-timing-function: ease;
         transition-property: background;
+        text-decoration: none;
 
         &:hover {
             background: var(--black);

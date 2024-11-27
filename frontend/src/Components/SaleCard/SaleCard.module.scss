@@ -9,6 +9,11 @@
     justify-content: space-between;
     position: relative;
 
+    a {
+        text-decoration: none;
+        z-index: 1;
+    }
+
     &:hover {
         .img {
             height: 244px;
@@ -63,7 +68,7 @@
         position: absolute;
         background: transparent;
         width: 284px;
-        z-index: 2;
+        z-index: 3;
         transform: translateX(-50%) translateY(130%);
         left: 50%;
         bottom: 15px;

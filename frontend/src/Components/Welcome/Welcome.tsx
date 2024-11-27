@@ -8,7 +8,7 @@ const Welcome: React.FC = () => {
             <p>
                 Amazing Discounts <br></br>on Garden Products!
             </p>
-            <Button>Check out</Button>
+            <Button link="/sales">Check out</Button>
         </section>
     );
 };

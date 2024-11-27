@@ -60,6 +60,7 @@ const AllProducts: React.FC = () => {
                 {filtredProducts.map((el: any) => (
                     <SaleCard
                         key={el.id}
+                        id={el.id}
                         title={el.title}
                         price={el.price}
                         discontPrice={el.discont_price}
