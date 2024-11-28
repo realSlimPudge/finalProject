@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./SaleCard.module.scss";
 import BtnCard from "../../Elements/BtnCard/BtnCard";
 import { Link } from "react-router-dom";
-import { addToCart } from "../../store/features/cartSlice";
+import { addToCart, removeFromCart } from "../../store/features/cartSlice";
 import { useDispatch } from "react-redux";
 
 const server: string = "http://localhost:3333";
@@ -42,6 +42,10 @@ const SaleCard: React.FC<SaleCardProps> = ({
         );
     };
 
+    const handleDeleteItem = (id: string) => {
+        dispatch(removeFromCart(id));
+    };
+
     return (
         <div className={styles.content}>
             {procent !== null && (
@@ -52,7 +56,11 @@ const SaleCard: React.FC<SaleCardProps> = ({
             <div className={styles.img}>
                 <img src={server + image} alt="" />
                 <div className={styles.btn__container}>
-                    <BtnCard onClick={handleAddToCart} />
+                    <BtnCard
+                        onClick={handleAddToCart}
+                        delete={handleDeleteItem}
+                        newId={newId}
+                    />
                 </div>
             </div>
             <Link to={"/products/" + id}>

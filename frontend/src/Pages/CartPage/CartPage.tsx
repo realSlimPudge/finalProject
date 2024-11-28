@@ -1,17 +1,14 @@
 import React from "react";
 import styles from "./CartPage.module.scss";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { RootState } from "../../store/store";
 import Title from "../../Elements/Title/Title";
 import Separator from "../../Elements/Separator/Separator";
 import Navigation from "../../Elements/Navigation/Navigation";
-import BtnCard from "../../Elements/BtnCard/BtnCard";
 import CartItem from "../../Components/CartItem/CartItem";
 import Form from "../../Elements/Form/Form";
 
 const CartPage: React.FC = () => {
-    const server: string = "http://localhost:3333";
-    const dispatch = useDispatch();
     const items = useSelector((state: RootState) => state.cart.items);
 
     const sum = () => {
@@ -21,7 +18,7 @@ const CartPage: React.FC = () => {
                     item.discont_price !== null
                         ? item.discont_price
                         : item.price;
-                return total + discont * item.quantity;
+                return parseFloat((total + discont * item.quantity).toFixed(2));
             }, 0);
         }
     };

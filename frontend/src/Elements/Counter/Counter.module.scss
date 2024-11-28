@@ -23,6 +23,15 @@
             }
         }
     }
+    .error {
+        &:hover {
+            border: 1px solid rgb(255, 67, 67);
+
+            svg path {
+                stroke: rgb(255, 67, 67);
+            }
+        }
+    }
     div {
         width: 96px;
         height: 58px;

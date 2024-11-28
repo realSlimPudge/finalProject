@@ -5,6 +5,7 @@ import productsCtgReducer from "./features/productsCtgSlice";
 import filtersReducer from "./features/filtersSlice";
 import itemReducer from "./features/itemSlice";
 import cartReducer from "./features/cartSlice";
+import saleSendReducer from "./features/saleSendSlice";
 
 export interface CartItem {
     id: string;
@@ -55,6 +56,7 @@ const store = configureStore({
         item: itemReducer,
         filters: filtersReducer,
         cart: cartReducer,
+        saleSend: saleSendReducer,
     },
 });
 

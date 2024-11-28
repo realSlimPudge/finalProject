@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./Counter.module.scss";
 
 interface CounterProps {
@@ -12,9 +12,19 @@ const Counter: React.FC<CounterProps> = ({
     onDecrease,
     onIncrease,
 }) => {
+    const [redButton, setRedButton] = useState<boolean>(false);
+    useEffect(() => {
+        if (quantity === 1) {
+            setRedButton(true);
+        } else {
+            setRedButton(false);
+        }
+    }, [quantity]);
+
     return (
         <div className={styles.counter}>
             <button
+                className={redButton ? `${styles.error}` : ""}
                 onClick={() => {
                     if (quantity > 1) {
                         onDecrease();

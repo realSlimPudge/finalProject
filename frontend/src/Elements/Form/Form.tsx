@@ -3,6 +3,9 @@ import Input from "../Input/Input";
 import BtnBanner from "../BtnBanner/BtnBanner";
 import { useForm, SubmitHandler } from "react-hook-form";
 import styles from "./Form.module.scss";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "../../store/store";
+import { submitForm } from "../../store/features/saleSendSlice";
 
 type FormValues = {
     name: string;
@@ -17,8 +20,11 @@ const Form: React.FC = () => {
         formState: { errors },
     } = useForm<FormValues>();
 
+    const dispatch = useDispatch();
+
     const onSubmit: SubmitHandler<FormValues> = (data) => {
         console.log(data);
+        dispatch(submitForm(data));
     };
 
     return (

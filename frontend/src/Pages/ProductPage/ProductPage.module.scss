@@ -87,6 +87,11 @@
     }
 }
 
+.add {
+    display: flex;
+    column-gap: 32px;
+}
+
 .description {
     row-gap: 16px;
     display: flex;

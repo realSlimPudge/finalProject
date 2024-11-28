@@ -15,10 +15,10 @@ const Cart: React.FC = () => {
 
     return (
         <div className={styles.header__card}>
-            {count.length > 0 && (
-                <div className={styles.count}>{sumOfItems()}</div>
-            )}
             <Link to="/order">
+                {count.length > 0 && (
+                    <div className={styles.count}>{sumOfItems()}</div>
+                )}
                 <svg
                     width="48"
                     height="48"

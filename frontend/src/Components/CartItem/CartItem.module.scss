@@ -6,6 +6,19 @@
     width: 780px;
     height: 180px;
 }
+.delete {
+    animation: delete 500ms ease;
+}
+@keyframes delete {
+    0% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
 .img {
     border: 1px solid var(--grey-divider);
     border-radius: 12px 0 0 12px;
