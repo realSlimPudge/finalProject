@@ -42,7 +42,7 @@
     background: var(--light-grey);
     padding: 32px;
     width: 548px;
-    height: 582px;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     row-gap: 32px;
@@ -77,4 +77,19 @@
             color: var(--black);
         }
     }
+}
+.order {
+    border-radius: 6px;
+    padding: 16px 32px;
+    width: 484px;
+    height: 58px;
+    background: var(--green);
+    border: none;
+    outline: none;
+    color: var(--white);
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 130%;
+    text-align: center;
+    cursor: pointer;
 }

@@ -6,7 +6,7 @@ import Title from "../../Elements/Title/Title";
 import Separator from "../../Elements/Separator/Separator";
 import Navigation from "../../Elements/Navigation/Navigation";
 import CartItem from "../../Components/CartItem/CartItem";
-import Form from "../../Elements/Form/Form";
+import axios from "axios";
 
 const CartPage: React.FC = () => {
     const items = useSelector((state: RootState) => state.cart.items);
@@ -25,6 +25,25 @@ const CartPage: React.FC = () => {
     const totalItems = () => {
         if (items.length > 0) {
             return items.reduce((total, item) => total + item.quantity, 0);
+        }
+    };
+
+    const sendOrder = async () => {
+        try {
+            const response = await axios.post(
+                "http://localhost:3333/sale/send",
+                items,
+                {
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                }
+            );
+            console.log("Ответ", response.data);
+            return response.data;
+        } catch (error) {
+            console.error("Ошибка нах", error);
+            throw error;
         }
     };
 
@@ -64,7 +83,9 @@ const CartPage: React.FC = () => {
                                 </div>
                             </div>
                         </div>
-                        <Form />
+                        <button className={styles.order} onClick={sendOrder}>
+                            Order
+                        </button>
                     </div>
                 </div>
             )}
